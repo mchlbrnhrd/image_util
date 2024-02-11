@@ -3,6 +3,8 @@ Util scripts for images. E.g. creating timelapse video. Check if images already 
 
 ## timelapse
 Creating timelapse video out of your images. Per default images has to be located in img-folder. Also blendend images in between of two images can be created for a more smooth timelapse video.
+
+[Tutorial-Video on youtube](https://youtu.be/sf10C6x1w7Y)
 ```
 python3 timelapse.py
 ```
