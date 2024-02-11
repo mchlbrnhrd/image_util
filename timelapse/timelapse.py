@@ -246,7 +246,7 @@ if max_images > 0:
   if num > max_images:
     num=max_images
 if blend_steps > 0:
-  num-=1
+  num-=1 # -1 because k+1 is used in loop
 for k in range(num):
   offset=k*(blend_steps+1)
   if blend_steps<=0:
@@ -273,7 +273,7 @@ for k in range(num):
 
 if blend_steps > 0:
   # add very last image when blend mode is used
-  img1 = Image.open(image_list[num-1])
+  img1 = Image.open(image_list[num]) # when blending is used: num = len()-1
   if not all_equal_flag:
     img1 = img1.resize((mean_width, mean_height))
   frame = np.array(img1)
